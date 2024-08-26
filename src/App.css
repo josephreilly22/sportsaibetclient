@@ -1,0 +1,1039 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@keyframes loadHowB {
+  from {
+    font-size: 0px;
+    opacity: 0.2;
+  }
+  to {
+    font-size: 50px;
+  }
+}
+
+@keyframes loadHowA {
+  from {
+    font-size: 0px;
+    opacity: 0.2;
+  }
+  to {
+    font-size: 40px;
+  }
+}
+
+@keyframes loadHowS {
+  from {
+    font-size: 20px;
+    opacity: 0.2;
+  }
+  to {
+    font-size: 20px;
+  }
+}
+
+@keyframes loadIn {
+  from {
+    transform: translateY(25px);
+    opacity: 0;
+  } 
+  to {
+    transform: translateY(0);
+  }
+} 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* HomePage */
+
+.homepage header {
+  height: 98vh;
+  background-image: linear-gradient(90deg, rgb(73, 63, 63), rgb(39, 39, 39), rgb(73, 63, 63));
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+  height: 85px;
+  background-color: rgb(1, 194, 146);
+  border-bottom: black 2px solid;
+  z-index: 20;
+}
+
+#navLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navLogoA {
+  color: black;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 40px;
+}
+
+.navLogoA img {
+  height: 30px;
+}
+
+.toggle {
+  display: none;
+  color: white;
+}
+
+nav ul {
+  display: flex;
+}
+
+li {
+  padding: 10px 25px;
+  text-decoration: none;
+  list-style: none;
+  font-size: 16px;
+  font-weight: 800;
+  margin: 15px;
+}
+
+.closedMenu {
+  display: none;
+}
+
+li a {
+  text-decoration: none;
+  color: black;
+}
+
+li img {
+  height: 25px;
+}
+
+.togglelines {
+  width: 16px;
+  height: 14px;
+}
+
+.navLogoA a {
+  text-decoration: none;
+  color: black;
+}
+
+
+/* Mobile Homepage */
+
+@media (max-width: 850px) {
+  
+  .menuClosed {
+    display: none;
+  }
+
+  .toggle {
+    display: block;
+    margin: 0;
+    padding: 5px;
+  }
+
+  .closeMenu {
+    height: 17px;
+  }
+
+  nav {
+    display: flex;
+    transition: 0.4s ease;
+  }
+
+  nav ul {
+    display: inline;
+  }
+
+  .navOpen {
+    background-color: rgb(1, 194, 146);
+    height: 35vh;
+  }
+
+  .navLogoOpen {
+    display: none;
+  }
+}
+
+
+
+/* Main Homepage Section */
+
+.mainheader {
+  margin: 150px;
+}
+
+.getTopPicks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainHeader h2 {
+  text-align: center;
+  color: white;
+  margin-top: 30px;
+  border: solid white 1px;
+  padding: 10px;
+  width: 250px;
+  border-radius: 20px;
+}
+
+.mainHeader h1 {
+  /* background-color: black; */
+  color: black;
+  text-align: center;
+  padding: 30px;
+}
+
+.gameCardHomepage {
+  display: grid;
+  grid-template-columns: 5fr 2fr 2fr 2fr;
+  text-align: center;
+  color: black;
+  align-items: center;
+  height: 20vh;
+  background-color: rgb(245, 237, 237);
+  /* box-shadow: 10px 10px 5px rgb(252, 247, 247); */
+  transition: 0.9s ease;
+  animation: cardLoad 0.6s ease;
+  border-bottom: 1px solid gray;
+  padding: 0px;
+}
+
+.mainHeader h2 a {
+  text-decoration: none;
+  color: white;
+  width: 250px;
+}
+
+.mainHeader h2:hover {
+  background-color: white;
+  color: blue;
+  cursor: pointer;
+}
+
+.mainHeader h2 a:hover {
+  color: blue;
+}
+
+.carousel h1 {
+  display: flex;
+  height: 50vh;
+  color: white;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.mainInfo {
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  text-align: center;
+  margin: 80px 60px;
+}
+
+.mainInfo h1 {
+  font-size: 60px;
+  animation: loadIn 1.5s ease;
+  animation-timeline: view();
+}
+
+.mainInfo h2 {
+  font-size: 24px;
+  opacity: 0.6;
+}
+
+.homepageHowItWorks {
+  background-image: url('./images/background.png');
+  background-size: 800px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.homepageWork  {
+  height: 60vh;
+  color: white;
+}
+
+
+.homepageWork h1 {
+  font-size: 50px;
+  animation: loadHowB;
+  margin: 30px;
+  animation-timeline: view(200px auto);
+}
+
+.homepageWork h4 {
+  font-size: 20px;
+  margin: 10px 30px;
+  animation: loadHowS view(200px auto);
+  animation-timeline: view(200px auto);
+  text-align: center;
+}
+
+.getPicksHomepage {
+  text-align: center;
+  margin-bottom: 250px;
+  display: flex;
+  justify-content: center;
+}
+
+.getPicksHomepage img {
+  width: 35px;
+  animation: loadHowA view(200px auto);
+  animation-timeline: view(200px auto);
+}
+
+.getPicksHomepage h2 {
+  animation: loadHowA view(200px auto);
+  animation-timeline: view(200px auto);
+}
+
+.getPicksHomepage a {
+  color: white;
+}
+
+@keyframes loadHowB {
+  from {
+    font-size: 0px;
+    opacity: 0.2;
+  }
+  to {
+    font-size: 50px;
+  }
+}
+
+@keyframes loadHowA {
+  from {
+    font-size: 0px;
+    opacity: 0.2;
+  }
+  to {
+    font-size: 40px;
+  }
+}
+
+@keyframes loadHowS {
+  from {
+    font-size: 20px;
+    opacity: 0.2;
+  }
+  to {
+    font-size: 20px;
+  }
+}
+
+@keyframes loadIn {
+  from {
+    transform: translateY(25px);
+    opacity: 0;
+  } 
+  to {
+    transform: translateY(0);
+  }
+} 
+
+@media (max-width: 500px) {
+  .homepageHowItWorks {
+    background-size: 500px;
+  }
+}
+
+.findSportMain {
+  color: black;
+  text-align: center;
+  background-image: linear-gradient(90deg, rgb(37, 130, 173), blue);
+  height: 50vh;
+}
+
+@media (max-width: 1000px) {
+  .mainInfo {
+    grid-template-columns: 1fr 1fr;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .mainInfo {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+
+
+/* Top Picks Page */
+
+.topPicks {
+  background-color: rgb(245, 237, 237);
+}
+
+.singleGameSection {
+  min-height: 100vh;
+}
+
+.topPicks h1 {
+  font-size: 35px;
+  color: black;
+  padding-top: 30px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.topPickGame {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.gameCard {
+  display: grid;
+  grid-template-columns: 5fr 1fr 2fr;
+  text-align: center;
+  color: black;
+  align-items: center;
+  height: 20vh;
+  background-color: rgb(245, 237, 237);
+  /* box-shadow: 10px 10px 5px rgb(252, 247, 247); */
+  transition: 0.9s ease;
+  animation: cardLoad 0.6s ease;
+  border-bottom: 1px solid gray;
+  margin: 5px 15px;
+  padding: 0px;
+}
+
+.gameCard h2 {
+  font-size: 32px;
+}
+
+.gameCard:hover {
+  /* transform: translateY(-10px); */
+  cursor: pointer;
+  /* box-shadow: 20px 20px 5px white; */
+  transition: 0.6s ease;
+  /* background-color: white; */
+}
+
+.gettingMLBData {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 70px;
+}
+
+.searchOdds {
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 10px; 
+}
+
+.searchHeader {
+  box-shadow: 0px 3px 5px gray;
+  margin-bottom: 5px;
+}
+
+.leaguelogo {
+  height: 30px;
+  margin: 10px 30px;
+}
+
+.getPickSportMLB {
+  display: grid;
+  grid-template-columns: 2fr 4fr 1fr;
+  align-items: center;
+  padding-top: 15px;
+}
+
+.getPickSport {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  align-items: center;
+  padding-top: 15px;
+}
+
+#live {
+  padding: 0px 2px;
+  background-color: red;
+}
+
+
+@keyframes cardLoad {
+  from {
+    transform: translateY(20px);
+  } 
+  to {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1100px) {
+  .gameCard {
+    grid-template-columns: 3fr 1fr 1fr;
+    gap: 20px;
+    padding: 30px;
+    height: auto;
+    width: auto;
+  }
+
+  .gameCard h2 {
+    font-size: 25px;
+    margin: 5px;
+  }
+
+  .gameCard h3 {
+    font-size: 18px !important; 
+  }
+
+  .topPickGame {
+    margin: 10px;
+  }
+}
+
+@media (max-width: 900px) {
+  .gameCard {
+    grid-template-columns: 5fr 1fr 1fr;
+    gap: 20px;
+    padding: 30px;
+    height: auto;
+    width: auto;
+  }
+
+.gameCardOdds {
+  display: none;
+}
+
+  .gameCard h2 {
+    font-size: 25px;
+    margin: 5px;
+  }
+
+  .gameCard h3 {
+    font-size: 18px !important;
+  }
+
+  .topPickGame {
+    margin: 10px;
+  }
+}
+
+
+@media (max-width: 700px) {
+
+  .gameCard {
+    grid-template-columns: 12fr 3fr 3fr;
+    gap: 20px;
+    padding: 30px;
+    height: auto;
+    width: auto;
+  }
+
+  .gameCardOdds {
+    display: none;
+  }
+
+  .gameCard h2 {
+    font-size: 13px !important;
+    margin: 5px;
+  }
+
+  .gameCard h3 {
+    font-size: 12px !important;
+  }
+}
+
+/* Search by Sport */
+.selectForSport {
+  margin: 0px 60px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Game Page */
+.gamePage {
+  background-color: rgb(245, 237, 237);;
+}
+
+.singleGameTeamSection {
+  margin-top: 70px;
+}
+
+.singleGameTeamHeader {
+  display: grid;
+  grid-template-columns: 4fr 1fr 4fr;
+  text-align: center;
+  align-items: center;
+  padding: 15px 0px;
+  color: white;
+  background-color: rgb(37, 37, 37);
+  box-shadow: 0px 5px 10px black;
+}
+
+.teamNameAndScore {
+  text-align: center;
+  color: white;
+}
+
+.teamNameAndScore h1 {
+  font-size: 50px;
+}
+
+.teamNameAndScore {
+  font-size: 40px;
+}
+
+.singleGameSection h4 {
+  font-size: 15px;
+}
+
+.singleGameSection h3 {
+  color: white;
+  font-size: 13px;
+  text-align: center;
+}
+
+.singleGameSection h2 {
+  color: white;
+  text-align: center;
+  font-size: 40px;
+}
+
+.lineScore {
+  height: 16vh;
+  align-items: center;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
+  margin: 20px;
+}
+
+.lineScore h2 {
+  color: black;
+  font-size: 20px;
+}
+
+.lineScore h3 {
+  color: black;
+}
+
+.lineScore h4 {
+  border: 1px solid white;
+  text-align: center;
+  background-color: rgb(150, 220, 248);
+}
+
+.gameInfo {
+  padding: 20px;
+  border-top: 1px white solid;
+}
+
+.gameInfo h4 {
+  text-align: center;
+  color: black;
+  font-size: 20px;
+  opacity: 0.6;
+}
+
+.gameInfo h5 {
+  color: black;
+  font-size: 15px;
+  text-align: center;
+  padding: 10px;
+}
+
+.gameInfo h1 {
+  color: white;
+  font-size: 30px;
+  text-align: center;
+}
+
+.gameOdds {
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid white;
+  border-radius: 15px;
+  margin: 20px 30px;
+  background-image: linear-gradient(90deg, rgb(73, 63, 63), rgb(17, 17, 17), rgb(73, 63, 63));
+}
+
+.gameOdds h4 {
+  font-size: 30px;
+}
+
+.oddsType {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 20px;
+  border-bottom: 0.3px solid white;
+  margin-bottom: 20px;
+  color: white !important;
+}
+
+.oddsType h3 {
+  font-size: 20px;
+}
+
+.oddsType h3:hover {
+  cursor: pointer;
+}
+
+/* .oddsType h3::after {
+  display: block;
+  content: "";
+  height: 2px;
+  transform: scaleX(0);
+  transition: 0.6s ease;
+  background-color: white;
+} 
+
+ .oddsType h3:hover::after {
+  transform: scaleX(1);
+} */
+
+.bestBook h5 {
+  background-color: gold !important;
+  color: green;
+}
+
+.oddsPerBook {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.oddsPerBook h4 {
+  font-size: 16px;
+}
+
+.oddNumbers {
+  border: 1px solid white;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+}
+
+.pickAnotherGame {
+  color: white;
+  font-size: 25px;
+  text-align: center;
+}
+
+.pickAnotherGame a {
+  color: white;
+}
+
+.winner h2 {
+  color: gold;
+}
+.winner h1 {
+  color: gold;
+}
+.winner {
+  color: gold !important;
+}
+
+.loser {
+  opacity: 0.3;
+}
+
+.pickOrOdds {
+  text-align: center;
+  box-shadow: 0px 8px 5px gray;
+}
+
+.generatePick {
+  text-align: center;
+  margin: 50px;
+}
+
+.gameProgress {
+  margin: 40px 80px;
+}
+
+.showingPick {
+  border: white solid 1px;
+  margin: 40px;
+  padding: 30px;
+  background-color: rgb(1, 194, 146);
+  border-radius: 15px;
+}
+
+.showingPick h1 {
+  font-size: 30px;
+}
+
+.showingPick h5 {
+  text-align: center;
+  color: white;
+}
+
+.showPickOverUnder {
+  border-top: white solid 1px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+@media (max-width: 1100px) {
+  .teamNameAndScore h1 {
+    font-size: 30px;
+  }
+  .pickAnotherGame {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 700px) {
+  .teamNameAndScore h1 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 470px) {
+  .teamNameAndScore h1 {
+    font-size: 18px;
+  }
+  .oddsType {
+    justify-content: space-between;
+
+  }
+  .oddsType h3 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 380px) {
+  .oddsType h3 {
+    font-size: 12px;
+  }
+}
+
+/* Results Page */
+.resultsPage {
+  background-color: rgb(245, 237, 237);
+}
+
+.yesterdayResults {
+  font-size: 20px !important;
+}
+
+.resultsPage h1 {
+  color: black;
+  text-align: center;
+  margin: 50px;
+  font-size: 30px;
+}
+
+.resultsPage h3 {
+  text-align: center;
+  font-size: 25px;
+  padding-bottom: 150px;
+}
+
+.statCards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.resultPercent {
+  margin: 50px;
+  display: grid;
+  gap: 30px;
+}
+
+.gameCardDate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.predictedGameTrue {
+  background-color: rgb(130, 235, 130);
+}
+
+.predictedGameFalse {
+  background-color: rgb(238, 154, 115);
+}
+
+.resultChart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0px;
+}
+
+/* Account Load Page */
+.userLoadPage {
+  background-image: linear-gradient(45deg, blue, purple);
+}
+
+.userLoadMain {
+  min-height: 80vh;
+}
+
+/* Account Page */
+.accountPage {
+  background-color: rgb(245, 237, 237);
+}
+
+.accountContentLoad {
+  min-height: 80vh;
+}
+
+.accountContent {
+  min-height: 70vh;
+  color: white;
+  margin: 70px 200px;
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 30px;
+  background-image: linear-gradient(90deg, rgb(73, 73, 73), rgb(37, 37, 37), rgb(73, 73, 73));
+}
+
+.accountContent h1 {
+  font-size: 27px;
+}
+
+.loginCardSpace {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoutButton {
+  text-align: center;
+}
+
+@media (max-width: 1000px) {
+  .accountContent {
+    margin: 30px;
+    padding: 20px;
+  }
+}
+
+/* Login Page */
+.loginPage {
+  background-color: rgb(245, 237, 237);
+}
+
+.loginContent {
+  min-height: 85vh;
+  text-align: center;
+}
+
+.loginContent h1 {
+  color: black;
+  margin: 50px;
+}
+
+.googleLoginButton {
+  background-color: rgb(1, 194, 146);
+}
+
+.loginContent h2 {
+  color: black; 
+  margin-top: 40px;
+  border-top: 1px solid white;
+  padding: 20px;
+}
+
+.loginCards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.loginCard {
+  margin: 30px;
+}
+
+
+
+
+/* Skeleton */
+#skeleton {
+  margin: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Contact Page */
+.contactPage {
+  background-color: rgb(245, 237, 237);
+}
+
+.howToContact {
+  min-height: 60vh;
+}
+
+.howToContact h1 {
+  text-align: center;
+  color: black;
+  margin: 40px;
+}
+
+.howToContact h2 {
+  text-align: center;
+  color: black;
+}
+
+
+
+
+/* Privacy Policy */
+.privacyPage {
+  background-color: rgb(245, 237, 237);
+  color: black;
+}
+
+.privacyPolicy {
+  margin: 20px;
+}
+
+/* Page not Found */
+
+.pageNotFound {
+  background-color: rgb(245, 237, 237);
+}
+
+
+/* Footer */
+.footer {
+  color: white;
+  display: flex;
+  padding: 20px;
+  background-image: linear-gradient(45deg, rgb(10, 129, 113), rgb(1, 194, 146));
+  height: 30vh;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding-top: 35px;
+  border-top: 1px solid white;
+}
+
+.footer a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  opacity: 0.5;
+}
+
+.footer h5 {
+  padding: 7px;
+}
