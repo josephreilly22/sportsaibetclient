@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import NavBar from "../components/navbar";
 import { Button } from "antd";
 
+
 const Contact = () => {
 
     useEffect(() => {

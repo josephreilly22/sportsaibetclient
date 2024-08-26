@@ -1,6 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
+
 export const fetchNFLGames = createAsyncThunk(
     'nfl/fetchNFLGames',
     async () => {

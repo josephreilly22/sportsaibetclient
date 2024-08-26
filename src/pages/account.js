@@ -9,6 +9,7 @@ import { Avatar, Card, Button, Popconfirm, Skeleton, Spin } from "antd";
 import { clearUserData, fetchUserData } from "../reducers/userSlice";
 import NavBar from "../components/navbar";
 
+
 const Account = () => {
 
     const user = useSelector(state => state.user);

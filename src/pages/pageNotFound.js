@@ -6,6 +6,7 @@ import logo from '../images/logo.png';
 import xButton from '../images/x-button.png';
 import Footer from "../components/footer";
 
+
 const PageNotFound = () => {
 
 

@@ -9,6 +9,6 @@ export default configureStore({
     reducer: {
         mlb: mlbReducer,
         nfl: nflReducer,
-        user: userReducer,
+        user: userReducer
     }
 })

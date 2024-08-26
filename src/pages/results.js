@@ -7,10 +7,12 @@ import axios from "axios";
 import CountUp from "react-countup";
 import NavBar from "../components/navbar";
 import { Tabs, Tab } from '@nextui-org/react';
-import CanvasJSReact from '@canvasjs/react-charts';
 
+// Canvas JS Chart
+import CanvasJSReact from '@canvasjs/react-charts';
 var CanvasJS = CanvasJSReact.CanvasJS;
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
+
 
 const Results = () => {
 

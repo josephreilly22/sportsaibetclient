@@ -1,5 +1,6 @@
 import Footer from "../components/footer";
 
+
 const TOC = () => {
     return (
         <div className="tocPage">

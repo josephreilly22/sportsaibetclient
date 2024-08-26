@@ -6,6 +6,7 @@ import xButton from '../images/x-button.png';
 import { AlignRightOutlined, UserOutlined } from '@ant-design/icons';
 import { Avatar } from "antd";
 
+
 const Privacy = () => {
 
     const [menu, setMenu] = useState(false);

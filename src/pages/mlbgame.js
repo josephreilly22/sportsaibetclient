@@ -7,6 +7,7 @@ import { Button, message, Steps } from 'antd';
 import Navbar from '../components/navbar';
 import { Tab, Tabs } from '@nextui-org/react';
 
+
 const MLBGame = () => {
 
     const mlb = useSelector((state) => state.mlb);
