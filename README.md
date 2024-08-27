@@ -25,7 +25,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/josephreilly22/sportsaibetaiserver">
+  <a href="https://github.com/josephreilly22/sportsaibetclient">
     <img src="image/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -34,14 +34,14 @@
   <p align="center">
     This is a piece of a larger Sports AI Bet project. This contains the front-end for Sports AI Bet. It allows users to interact with the data, create accounts, and see current sports scores and odds. You can visit the website at: https://www.sportsaibet.com
     <br />
-    <a href="https://github.com/josephreilly22/sportsaibetaiserver"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/josephreilly22/sportsaibetclient"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/josephreilly22/sportsaibetaiserver">View Demo</a>
+    <a href="https://github.com/josephreilly22/sportsaibetclient">View Demo</a>
     ·
-    <a href="https://github.com/josephreilly22/sportsaibetaiserver">Report Bug</a>
+    <a href="https://github.com/josephreilly22/sportsaibetclient">Report Bug</a>
     ·
-    <a href="https://github.com/josephreilly22/sportsaibetaiserverd">Request Feature</a>
+    <a href="https://github.com/josephreilly22/sportsaibetclient">Request Feature</a>
   </p>
 </div>
 
@@ -110,10 +110,10 @@ This is an example of how to list things you need to use the software and how to
 
 ### Installation
 
-1. Check out the repo at https://github.com/josephreilly22/sportsaibetaiserver
+1. Check out the repo at https://github.com/josephreilly22/sportsaibetclient
 2. Clone the repo
    ```sh
-   git clone https://github.com/josephreilly22/sportsaibetaiserver
+   git clone https://github.com/josephreilly22/sportsaibetclient
    ```
 3. Install NPM packages
    ```sh
@@ -154,7 +154,7 @@ Distributed under the Apache License. See `LICENSE.txt` for more information.
 
 Joseph Reilly - joseph2reilly@gmail.com
 
-Project Link: [https://github.com/josephreilly22/sportsaibetaiserver](https://github.com/josephreilly22/sportsaibetaiserver)
+Project Link: [https://github.com/josephreilly22/sportsaibetclientr](https://github.com/josephreilly22/sportsaibetclient)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
