@@ -32,7 +32,7 @@
 <h3 align="center">Sports AI Bet (Front-End)</h3>
 
   <p align="center">
-    This is a piece of a larger Sports AI Bet project. This contains the front-end for Sports AI Bet. It allows users to interact with the data, create accounts, and see current sports scores and odds.
+    This is a piece of a larger Sports AI Bet project. This contains the front-end for Sports AI Bet. It allows users to interact with the data, create accounts, and see current sports scores and odds. You can visit the website at: https://www.sportsaibet.com
     <br />
     <a href="https://github.com/josephreilly22/sportsaibetaiserver"><strong>Explore the docs »</strong></a>
     <br />
