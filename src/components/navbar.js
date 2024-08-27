@@ -6,7 +6,6 @@ import { Avatar } from "antd";
 import { UserOutlined } from '@ant-design/icons';
 import toggle from '../images/toggle.png'
 
-
 const NavBar = () => {
 
     const [menu, setMenu] = useState(false);
