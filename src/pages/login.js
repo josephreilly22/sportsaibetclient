@@ -3,23 +3,27 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import logo from '../images/logo.png';
 import xButton from '../images/x-button.png';
 import { AlignRightOutlined, GoogleOutlined, UserOutlined } from '@ant-design/icons';
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import Footer from "../components/footer";
 import { Button, Card, Avatar } from "antd";
 import NavBar from "../components/navbar";
+import { fetchUserData } from "../reducers/userSlice";
 
 
 const Login = () => {
 
     const user = useSelector(state => state.user)
     const navigate = useNavigate();
+    const dispatch = useDispatch();
+    
 
     useEffect(() => {
         window.scroll(0, 0);
+        dispatch(fetchUserData());
         if (user.loggedIn === true) {
             navigate('/account')
         }
-    }, [])
+    }, [user])
 
     const connectToLogin = () => {
         window.location = 'https://api.sportsaibet.com/auth/google'

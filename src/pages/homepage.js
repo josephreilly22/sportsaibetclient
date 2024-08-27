@@ -85,8 +85,8 @@ const Homepage = () => {
                     <h2>Sports Books</h2>
                 </div>
                 <div className="mainInfoItem">
-                    <h1>FREE</h1>
-                    <h2>Predictions</h2>
+                    <h1>12%</h1>
+                    <h2>ROI</h2>
                 </div>
             </div>
             <div className='homepageHowItWorks'>

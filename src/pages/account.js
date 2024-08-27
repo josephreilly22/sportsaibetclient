@@ -43,8 +43,7 @@ const Account = () => {
                 body: data 
                 
             });
-        getUser()
-        window.location.reload();
+        getUser();
     }
 
     const logout = async () => {
