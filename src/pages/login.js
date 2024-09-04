@@ -16,9 +16,11 @@ const Login = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
     
-
     useEffect(() => {
         window.scroll(0, 0);
+    }, [])
+
+    useEffect(() => {
         dispatch(fetchUserData());
         if (user.loggedIn === true) {
             navigate('/account')
