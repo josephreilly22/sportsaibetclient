@@ -18,10 +18,10 @@ const Login = () => {
     
     useEffect(() => {
         window.scroll(0, 0);
+        dispatch(fetchUserData());
     }, [])
 
     useEffect(() => {
-        dispatch(fetchUserData());
         if (user.loggedIn === true) {
             navigate('/account')
         }
