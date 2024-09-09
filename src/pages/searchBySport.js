@@ -20,11 +20,17 @@ const SearchBySport = () => {
 
     const dispatch = useDispatch();
 
+    const [sport, setSport] = useState('mlb');
+
     useEffect(() => {
         window.scroll(0, 0);
-        dispatch(fetchMLBGames());
-        // dispatch(fetchNFLGames());
-    }, [])
+        if (sport === 'mlb' && mlb.games.length === 0) {
+            dispatch(fetchMLBGames());
+        }
+        if (sport === 'nfl' && nfl.games.length === 0) {
+            dispatch(fetchNFLGames());
+        }
+    }, [sport])
 
     const navigate = useNavigate();
 
@@ -46,7 +52,6 @@ const SearchBySport = () => {
         navigate(`/nfl/${id}`)
     }
 
-    const [sport, setSport] = useState('mlb');
 
     const [messageApi, contextHolder] = message.useMessage();
 
@@ -84,7 +89,7 @@ const SearchBySport = () => {
                         <Radio.Button value="nba" onClick={() => setSport('nba')} disabled>NBA</Radio.Button>
                         <Radio.Button value="nhl" onClick={() => setSport('nhl')} disabled>NHL</Radio.Button>
                     </Radio.Group> */}
-                    <Tabs variant="solid" aria-label="Tabs variants" disabledKeys={['nba', 'nhl', 'nfl']} onSelectionChange={setSport}>
+                    <Tabs variant="solid" aria-label="Tabs variants" disabledKeys={['nba', 'nhl']} onSelectionChange={setSport}>
                         <Tab key="mlb" title='MLB' />
                         <Tab key="nfl" title='NFL' />
                         <Tab key="nba" title='NBA' />
@@ -92,11 +97,11 @@ const SearchBySport = () => {
                     </Tabs>
                 </div>
                 <div className="selctedSport">
-                    {sport === 'mlb' && <div className="getPickSportMLB">
+                    {sport === 'mlb' && mlb.games.length > 0 &&<div className="getPickSportMLB">
                         <img className="leaguelogo" alt="mlb" src={mlblogo} />
                         <h4>Major League Baseball</h4>
                     </div>}
-                    {sport === 'nfl' && <div className="getPickSport">
+                    {sport === 'nfl' && !nflloading && nfl.games.length > 0 && <div className="getPickSport">
                         <img className="leaguelogo" alt="mlb" src={nfllogo} />
                         <h4>National Football League</h4>
                         <h4>Week {nfl.games[0].week}</h4>
@@ -165,19 +170,26 @@ const SearchBySport = () => {
                     return (
                         <div className="gameCard" onClick={(e) => handlePickNFLGame(e, game._id)}>
                             <div>
-                                <h2>{game.teamTwo}</h2>
-                                <h2>{game.teamOne}</h2>
+                                <h2 className={game.teamOneWinner === 1 ? "loser" : ""}>{game.teamTwo}</h2>
+                                <h2 className={game.teamOneWinner === 0 ? "loser" : ""}>{game.teamOne}</h2>
                             </div>
-                            <div className="gameCardOdds">
-                                <h3>O/U: {game.odds.overUnder}</h3>
-                                <h3>{game.odds.favored}</h3>
+                            <div className="gameCardScore">
+                                {(game.teamTwoLineScore !== null) && <h2 className={game.teamOneWinner === 1 ? "loser" : ""}>{game.teamTwoScore}</h2>}
+                                {(game.teamTwoLineScore !== null) && <h2 className={game.teamOneWinner === 0 ? "loser" : ""}>{game.teamOneScore}</h2>}
+                                {/* {(game.teamTwoLineScore === null) && <h2 className='searchOdds'></h2>}
+                                {(game.teamTwoLineScore === null) && <h2 className='searchOdds'></h2>} */}
                             </div>
-                            <div>
-                            </div>
-                            <div>
+                            {game.teamTwoLineScore === null && <div>
                                 <h3>{game.date}</h3>
                                 <h3>{game.time}</h3>
-                            </div>
+                            </div>}
+                            {(game.teamOneWinner === 1 || game.teamOneWinner === 0) && <div>
+                                <h3>Final</h3>
+                            </div>}
+                            {((game.teamOneWinner !== 1 && game.teamOneWinner !== 0) && (game.teamTwoLineScore !== null)) && <div>
+                                <h3 id="live">LIVE</h3>
+                                <h3>Qtr {game.teamTwoLineScore.length}</h3>
+                            </div>}
                         </div>
                     )
                 })}

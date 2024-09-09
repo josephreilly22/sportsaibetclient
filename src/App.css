@@ -579,6 +579,7 @@ li img {
   box-shadow: 0px 5px 10px black;
 }
 
+
 .teamNameAndScore {
   text-align: center;
   color: white;
@@ -617,16 +618,25 @@ li img {
   margin: 20px;
 }
 
-.lineScore h2 {
+.nfllinesscore {
+  height: 16vh;
+  align-items: center;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 1fr 1fr 2fr;
+  margin: 20px;
+}
+
+.lineScore h2, .nfllinesscore h2 {
   color: black;
   font-size: 20px;
 }
 
-.lineScore h3 {
+.lineScore h3, .nfllinesscore h3 {
   color: black;
 }
 
-.lineScore h4 {
+.lineScore h4, .nfllinesscore h4 {
   border: 1px solid white;
   text-align: center;
   background-color: rgb(150, 220, 248);
@@ -801,6 +811,10 @@ li img {
 @media (max-width: 700px) {
   .teamNameAndScore h1 {
     font-size: 20px;
+  }
+
+  .singleGameTeamHeader h5 {
+    font-size: 7px;
   }
 }
 
